@@ -31,6 +31,7 @@
       border-radius: 20px;
       border: 1px solid black;
       overflow: hidden;
+      background-color: snow;
     }
     .grid-item {
       min-width: 400px;
@@ -60,8 +61,6 @@
     .text {
       padding-left: 10px;
       padding-right: 10px;
-      text-align: left;
-      background-color: snow;
       box-sizing: border-box;
     }
     .text>p::first-letter {
@@ -69,21 +68,16 @@
       font-size: 2em;
     }
     @media screen and (max-width: 1200px) {
-      body {
-        width: 100%;
-      }
       body>div {
-        margin: 0;
-        width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: auto;
       }
       .grid {
-          flex-direction: column;
-          width: 100%;
-          border-radius: 0;
-          border-width: 0;
+          display: block;
       }
       .grid-item{
-        width: 100%;
+        width: auto;
       }
       .text {
         height: auto;
@@ -96,7 +90,7 @@
     <div class="grid">
       <div class="grid-item title-card">
         <img src="https://www.tjoloholm.se/wp-content/uploads/2014/06/July-1st-4387-2048x1066.jpg" />
-        <h1>Tjolöholm</h1>
+        <h1>Tjolöholms slott</h1>
       </div>
       <div class="grid-item text">
         <p>
