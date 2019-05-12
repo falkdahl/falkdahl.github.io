@@ -14,26 +14,22 @@
     body {
       text-align: center;
       font-family: 'Open Sans', sans-serif;
-      margin: 0;
-    }
-    body>div{
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
     .grid {
-      display: inline-flex;
+      margin: 10px auto;
+      display: flex;
       flex-wrap: nowrap;
-      justify-content: center;
+      overflow: hidden;
+      justify-content: left;
       border-radius: 20px;
       border: 1px solid black;
-      overflow: hidden;
       background-color: snow;
+      max-width: 1200px;
     }
     .grid-item {
       min-width: 400px;
       min-height: 400px;
-      width: 400px;
-      height: 400px;
+      max-width:  400px;
     }
     .title-card {
       position: relative;
@@ -55,27 +51,21 @@
       width: 100%;
     }
     .text {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding: 20px;
+      max-width: none;
     }
     .text>p::first-letter {
       font-weight: bold;
       font-size: 2em;
     }
     @media screen and (max-width: 1200px) {
-      body>div {
-        width: 96vw;
-        margin-left: auto;
-        margin-right: auto;
-      }
       .grid {
-          display: block;
+          flex-direction: column;
+          max-width: 95vw;
       }
-      .grid-item{
-        width: auto;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
+      .grid-item {
+        max-width: none;
+        height: 400px;
       }
       .text {
         height: auto;
@@ -84,74 +74,66 @@
     }
   </style>
 
-  <div>
-    <div class="grid">
-      <div class="grid-item title-card">
-        <img src="https://www.tjoloholm.se/wp-content/uploads/2014/06/July-1st-4387-2048x1066.jpg" />
-        <h1>Tjolöholms slott</h1>
-      </div>
-      <div class="grid-item text">
-        <p>
-          På dagen den 1 juni gör vi en utflykt till Tjolöholms slott. 
-          Visning av huset eller trädgård är bokad till kl 14. Det finns 24 biljetter
-          till huset och 6 biljetter till trädgårdsvisning, så anmäl gärna om ni
-          vill gå trädgårdsvisningen!
-        </p>
-        <p>
-          Vi kommer sikta på att vara där kl 12, för att kunna äta lunch på plats
-          och kolla runt. Häng gärna med när ni kan, vi får lösa transport
-          tillsammans i de bilar som finns! Berätta gärna om ni har bil + hur många
-          platser.
-        </p>
-        <p>
-          Väl mött!
-        </p>
-      </div>
-      <div class="grid-item">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d275387.9115229434!2d11.6312111148557!3d57.56163165004522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464fdd146e0257eb%3A0x281c677f267a4aec!2sTjol%C3%B6holms+slott!5e0!3m2!1ssv!2sse!4v1557517285787!5m2!1ssv!2sse" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
+  <div class="grid">
+    <div class="grid-item title-card">
+      <img src="https://www.tjoloholm.se/wp-content/uploads/2014/06/July-1st-4387-2048x1066.jpg" />
+      <h1>Tjolöholms slott</h1>
+    </div>
+    <div class="grid-item text">
+      <p>
+        På dagen den 1 juni gör vi en utflykt till Tjolöholms slott. 
+        Visning av huset eller trädgård är bokad till kl 14. Det finns 24 biljetter
+        till huset och 6 biljetter till trädgårdsvisning, så anmäl gärna om ni
+        vill gå trädgårdsvisningen!
+      </p>
+      <p>
+        Vi kommer sikta på att vara där kl 12, för att kunna äta lunch på plats
+        och kolla runt. Häng gärna med när ni kan, vi får lösa transport
+        tillsammans i de bilar som finns! Berätta gärna om ni har bil + hur många
+        platser.
+      </p>
+      <p>Väl mött!</p>
+    </div>
+    <div class="grid-item">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d275387.9115229434!2d11.6312111148557!3d57.56163165004522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464fdd146e0257eb%3A0x281c677f267a4aec!2sTjol%C3%B6holms+slott!5e0!3m2!1ssv!2sse!4v1557517285787!5m2!1ssv!2sse" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>
 
-  <div>
-    <div class="grid">
-      <div class="grid-item title-card">
-        <img src="https://cdn.elite.se/globalassets/hotels/goteborg/plaza/swea-hof/elite-plaza-hotel-swea-1920x1301.jpg" />
-        <h1>Swea Hof</h1>
-      </div>
-      <div class="grid-item text">
-        <p>
-          Middagen kommer gå av stapeln på Restaurang Swea Hof, i Elite hotel nära Domkyrkan.
-          Vi har inte bekräftat menyn (eller ens exakt tid) med restaurangen än, men så fort vi har det så
-          kommer vi återkomma med meny, så att de som har specialkost kan säga till hur det passar.
-        </p>
-      </div>
-      <div class="grid-item">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4720.839147646259!2d11.960993584494132!3d57.70568035547282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff36641b45909%3A0x78c7287b14fad44b!2sSwea+Hof!5e0!3m2!1ssv!2sse!4v1557517347866!5m2!1ssv!2sse" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
+  <div class="grid">
+    <div class="grid-item title-card">
+      <img src="https://cdn.elite.se/globalassets/hotels/goteborg/plaza/swea-hof/elite-plaza-hotel-swea-1920x1301.jpg" />
+      <h1>Swea Hof</h1>
+    </div>
+    <div class="grid-item text">
+      <p>
+        Middagen kommer gå av stapeln på Restaurang Swea Hof, i Elite hotel nära Domkyrkan.
+        Vi har inte bekräftat menyn (eller ens exakt tid) med restaurangen än, men så fort vi har det så
+        kommer vi återkomma med meny, så att de som har specialkost kan säga till hur det passar.
+      </p>
+    </div>
+    <div class="grid-item">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4720.839147646259!2d11.960993584494132!3d57.70568035547282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff36641b45909%3A0x78c7287b14fad44b!2sSwea+Hof!5e0!3m2!1ssv!2sse!4v1557517347866!5m2!1ssv!2sse" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
   </div>
 
-  <div>
-    <div class="grid">
-      <div class="grid-item title-card">
-        <img src="https://www.crateandbarrel.com/blog/wp-content/uploads/2015/05/bridal-shower-gifts.jpg" />
-        <h1>Presenter</h1>
-      </div>
-      <div class="grid-item text">
-        <p>
-          Vi har funderat mycket runt presenter. Vi har inte mycket
-          vi känner att vi saknar, och egentligen är vi mest glada att ni vill
-          komma :)
-        </p>
-        <p>
-          Om ni vill ge något så föreslår vi därför en peng insatt på konto 9025.22.593.29.
-          Det är ett konto vi startat för bebisen. Pengar som hamnar där
-          kommer i ett första steg användas för de saker vi vet att vi behöver,
-          till exempel vagn, skötbord och annat vi inte kan eller vill låna oss till. 
-          I ett andra steg blir kontot ett sparkonto för lillen.
-        </p>
-      </div>
+  <div class="grid">
+    <div class="grid-item title-card">
+      <img src="https://www.crateandbarrel.com/blog/wp-content/uploads/2015/05/bridal-shower-gifts.jpg" />
+      <h1>Presenter</h1>
+    </div>
+    <div class="grid-item text">
+      <p>
+        Vi har funderat mycket runt presenter. Vi har inte mycket
+        vi känner att vi saknar, och egentligen är vi mest glada att ni vill
+        komma :)
+      </p>
+      <p>
+        Om ni vill ge något så föreslår vi därför en peng insatt på konto 9025.22.593.29.
+        Det är ett konto vi startat för bebisen. Pengar som hamnar där
+        kommer i ett första steg användas för de saker vi vet att vi behöver,
+        till exempel vagn, skötbord och annat vi inte kan eller vill låna oss till. 
+        I ett andra steg blir kontot ett sparkonto för lillen.
+      </p>
     </div>
   </div>
 
